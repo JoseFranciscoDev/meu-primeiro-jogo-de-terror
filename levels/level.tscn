@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cjr4fe0iqaavc"]
 
 [ext_resource type="Texture2D" uid="uid://dxdfi7xq02hku" path="res://icon.svg" id="1_80vhd"]
+[ext_resource type="PackedScene" uid="uid://hk8kryn51ypb" path="res://player/player.tscn" id="1_hjsbj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cc37w"]
-size = Vector3(15, 1, 15)
+size = Vector3(149.54718, 2.3364258, 130.55664)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wah6k"]
 albedo_texture = ExtResource("1_80vhd")
@@ -14,13 +15,16 @@ size = Vector3(9.999878, 1, 8.651794)
 
 [node name="level" type="Node3D" unique_id=2039513023]
 
+[node name="player" parent="." unique_id=1073328540 instance=ExtResource("1_hjsbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.74987, 0)
+
 [node name="chao" type="StaticBody3D" parent="." unique_id=17973974]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chao" unique_id=1572414668]
-transform = Transform3D(0.9999603, 0, -0.008907899, 0, 1, 0, 0.008907899, 0, 0.9999603, 0.06277251, 0, 0.06562533)
+transform = Transform3D(0.9999603, 0, -0.008907914, 0, 1, 0, 0.008907914, 0, 0.9999603, 28.645119, 6.2662416, -19.887594)
 shape = SubResource("BoxShape3D_cc37w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="chao" unique_id=2009266374]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0.008605957, 0, 0.047027588)
+transform = Transform3D(15, 0, 4.7683716e-07, 0, 15, 0, -4.7683716e-07, 0, 15, 27.445053, 0, -20.072184)
 material_override = SubResource("StandardMaterial3D_wah6k")
 mesh = SubResource("BoxMesh_8p87e")

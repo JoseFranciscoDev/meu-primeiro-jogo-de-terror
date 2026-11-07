@@ -1,18 +1,27 @@
 [gd_scene format=3 uid="uid://hk8kryn51ypb"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_cc37w"]
+[ext_resource type="Script" uid="uid://cb2aodpk8kl1b" path="res://player/script.gd" id="1_oul6g"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cc37w"]
 
-[node name="player" type="CharacterBody3D" unique_id=1073328540]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cc37w"]
+radius = 0.5576172
+height = 2.2131348
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1459685087]
-mesh = SubResource("CapsuleMesh_cc37w")
+[node name="player" type="CharacterBody3D" unique_id=1073328540]
+script = ExtResource("1_oul6g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=900579649]
+transform = Transform3D(1, 0, 0, 0, 1, -5.5879354e-09, 7.450581e-09, 2.3283064e-09, 1, 0, 0, -9.313226e-10)
 shape = SubResource("CapsuleShape3D_cc37w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1459685087]
+transform = Transform3D(-0.12557667, 0.022965232, 0.991818, -0.07841085, 0.99637485, -0.03299854, -0.9889803, -0.08191314, -0.12332073, 0.004004687, 0.14534426, -0.010562539)
+mesh = SubResource("CapsuleMesh_cc37w")
 
 [node name="cabeca" type="Node3D" parent="." unique_id=119876375]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5449244, 0)
 
 [node name="Camera3D" type="Camera3D" parent="cabeca" unique_id=1585372728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08683735, 0.95967996, 2.452147)
+fov = 58.051296
